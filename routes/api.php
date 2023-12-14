@@ -27,6 +27,7 @@ Route::post('registro',[AuthController::class,'register']);
 
 Route::post('logueo',[AuthController::class,'login']);
 
+//Rutas que se pueda acceder a ellas cuando estemos en la sesión
 Route::middleware(['auth:sanctum'])->group(function(){
     
     Route::get('verProductos',[ProductoController::class,'index']);
